@@ -21,12 +21,13 @@ export type MovieT = {
 export const Results = ({ results }: { results: MovieT[] }) => {
   return (
     <div>
-      {results.map((result: MovieT) => (
-        <div key={result.id}>
-          {result.title || result.name}
-          {result.original_title && `(${result.original_title})`}
-        </div>
-      ))}
+      {results &&
+        results.map((result: MovieT) => (
+          <div key={result.id}>
+            {result.title || result.name}
+            {result.original_title && `(${result.original_title})`}
+          </div>
+        ))}
     </div>
   );
 };
