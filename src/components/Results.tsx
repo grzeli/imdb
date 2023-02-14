@@ -15,6 +15,7 @@ export type MovieT = {
   vote_count?: number;
   video?: boolean;
   vote_average?: number;
+  name?: string;
 };
 
 export const Results = ({ results }: { results: MovieT[] }) => {
@@ -22,7 +23,8 @@ export const Results = ({ results }: { results: MovieT[] }) => {
     <div>
       {results.map((result: MovieT) => (
         <div key={result.id}>
-          {result.title}({result.original_title})
+          {result.title || result.name}
+          {result.original_title && `(${result.original_title})`}
         </div>
       ))}
     </div>
