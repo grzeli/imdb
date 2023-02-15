@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card';
 
 export type MovieT = {
   poster_path?: string | null;
@@ -16,18 +17,13 @@ export type MovieT = {
   video?: boolean;
   vote_average?: number;
   name?: string;
+  first_air_date?: string;
 };
 
 export const Results = ({ results }: { results: MovieT[] }) => {
   return (
-    <div>
-      {results &&
-        results.map((result: MovieT) => (
-          <div key={result.id}>
-            {result.title || result.name}
-            {result.original_title && `(${result.original_title})`}
-          </div>
-        ))}
+    <div className='sm:grid sm:grid-cols-2 lg:grid-cold-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4'>
+      {results && results.map((result: MovieT) => <Card key={result.id} result={result} />)}
     </div>
   );
 };

@@ -16,11 +16,9 @@ export const NavbarItem: React.FC<PropsT> = ({ title, param }) => {
     <div>
       <Link
         href={`/?genre=${param}`}
-        // eslint-disable-next-line prettier/prettier
         className={`hover:text-amber-600 font-semibold p-2 m-1 ${genre &&
           genre === param &&
           'underline underline-offset-8 decoration-4 decoration-amber-500 rounded-lg'
-          // eslint-disable-next-line prettier/prettier
           }`}
       >
         {title}
