@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuItem from './MenuItem';
-import { ImHome as HomeIcon } from 'react-icons/Im';
+import { ImHome as HomeIcon } from 'react-icons/im';
 import { BsInfoCircleFill as AboutIcon } from 'react-icons/bs';
 import Link from 'next/link';
 import DarkModeSwitch from './DarkModeSwitch';
