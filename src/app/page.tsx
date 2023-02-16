@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { Results } from '@/components/Results';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
