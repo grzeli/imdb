@@ -6,17 +6,16 @@ import { HiThumbUp as ThumbUp } from 'react-icons/hi';
 
 export default function Card({ result }: { result: MovieT }) {
   return (
-    <div className='cursor-pointer sm:hover:shadow-gray-400 sm:shadow-md rounded-2xl sm:m-2 transition-shadow duration-200 group pb-2'>
+    <div className='cursor-pointer sm:hover:shadow-gray-400 shadow-md rounded-2xl mb-8 sm:m-2 transition-shadow duration-200 group pb-2'>
       <Link href={`/movie/${result.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${result.backdrop_path || result.poster_path}`}
           width={500}
           height={300}
           alt={'image not available'}
-          className='sm:rounded-t-2xl group-hover:opacity-80 transition-opacity duration-200 -mt-[1px] -mx-[1px] max-w-[calc(100%+2px) w-[calc(100%+2px)] shadow-sm shadow-zinc-300'
+          className='sm:h-[150px] object-cover max-h-[300px] rounded-t-2xl group-hover:opacity-80 transition-opacity duration-200 -mt-[1px] -mx-[1px] max-w-[calc(100%+2px) w-[calc(100%+2px)] shadow-sm shadow-zinc-300'
           placeholder='blur'
           blurDataURL='/spinner.svg'
-          style={{ height: 'auto' }}
         ></Image>
         <div className='p-2'>
           <p className='line-clamp-2 text-md mb-2'>{result.overview}</p>
