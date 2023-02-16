@@ -3,8 +3,8 @@ import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
 const API_KEY = process.env.API_KEY;
 
-export default async function Home({ searchParams }: { searchParams: Params }) {
-  const genre = searchParams.genre || 'fetchTrending';
+export default async function Home({ searchParams }: { searchParams?: Params }) {
+  const genre = searchParams?.genre || 'fetchTrending';
   const res = await fetch(
     // eslint-disable-next-line prettier/prettier
     `https://api.themoviedb.org/3/${genre === 'fetchTopRated' ? 'movie/top_rated' : 'trending/all/week'
