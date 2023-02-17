@@ -8,7 +8,7 @@ import DarkModeSwitch from './DarkModeSwitch';
 export default function Header() {
   return (
     <div className='flex justify-between mx-2 max-w-6xl sm:mx-auto items-center py-6'>
-      <div className='flex'>
+      <div className='flex pl-3'>
         <MenuItem title={'Home'} address={'/'} Icon={HomeIcon} />
         <MenuItem title={'About'} address={'/about'} Icon={AboutIcon} />
       </div>
